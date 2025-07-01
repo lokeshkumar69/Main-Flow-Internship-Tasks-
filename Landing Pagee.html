@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Paws | Pet Shop</title>
+  <style>
+    * {margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI',sans-serif}
+    html {scroll-behavior:smooth}
+    body {background:#fffdf7}
+
+    header, footer {
+      background:#ffa64d; color:white; padding:20px 40px;
+    }
+    header {
+      display:flex; justify-content:space-between; align-items:center;
+    }
+    .navbar {
+      list-style:none; display:flex; gap:25px;
+    }
+    .navbar li {position:relative}
+    .navbar a {
+      color:white; font-weight:bold; padding:8px 12px; display:block;
+      text-decoration:none;
+    }
+    .navbar a:hover {
+      background:rgba(255,255,255,0.2); border-radius:5px;
+    }
+    .dropdown-menu {
+      display:none; position:absolute; top:100%; left:0;
+      background:#ffd6a0; min-width:160px; border-radius:5px;
+      box-shadow:0 4px 8px rgba(0,0,0,0.1); z-index:99;
+    }
+    .dropdown-menu li a {
+      color:#333; padding:10px;
+    }
+    .dropdown:hover .dropdown-menu {
+      display:block;
+    }
+
+    .hero {
+      display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center;
+      padding:60px 40px; background:#fff0dc;
+    }
+    .hero-text {
+      max-width:600px;
+    }
+    .hero-text h2 {
+      font-size:40px; margin-bottom:20px; color:#333;
+    }
+    .hero-text p {
+      font-size:18px; margin-bottom:30px;
+    }
+    .cta {
+      background:#ff7300; color:white; border:none;
+      padding:12px 24px; border-radius:6px; font-size:16px;
+      cursor:pointer;
+    }
+    .hero img {
+      max-width:400px; width:100%;
+    }
+
+    .features {
+      padding:60px 40px; background:#fff; text-align:center;
+    }
+    .features h3 {
+      font-size:32px; margin-bottom:40px; color:#444;
+    }
+    .feature-cards {
+      display:flex; flex-wrap:wrap; justify-content:center; gap:30px;
+    }
+    .card {
+      width:280px; background:#fff6e6; border-radius:10px;
+      padding:20px; box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    }
+    .card img {
+      width:100%; border-radius:8px;
+    }
+    .card h4 {
+      margin:15px 0 10px;
+    }
+    .card p {
+      font-size:14px; color:#555;
+    }
+
+    footer {
+      text-align:center; font-size:14px;
+    }
+    footer a {
+      color:white; margin:0 10px; text-decoration:underline;
+    }
+
+    @media (max-width:768px) {
+      .hero {flex-direction:column; text-align:center}
+      .navbar {
+        flex-direction:column; background:#ffae5c; padding:10px;
+      }
+      .dropdown-menu {
+        position:static; box-shadow:none; background:#ffd6a0; padding-left:15px;
+      }
+      .feature-cards {
+        flex-direction:column; align-items:center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Happy Paws</h1>
+    <nav>
+      <ul class="navbar">
+        <li><a href="#">Home</a></li>
+        <li class="dropdown">
+          <a href="#">Features</a>
+          <ul class="dropdown-menu">
+            <li><a href="#food">Food</a></li>
+            <li><a href="#toys">Toys</a></li>
+            <li><a href="#grooming">Grooming</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Services</a>
+          <ul class="dropdown-menu">
+            <li><a href="#food">Vet Support</a></li>
+            <li><a href="#grooming">Pet Training</a></li>
+          </ul>
+        </li>
+        <li><a href="#footer">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Your Pet’s Favorite Store 🐶</h2>
+      <p>Shop the best food, toys, and care products for your lovely pets. Trusted by thousands of pet lovers!</p>
+      <button class="cta">Get Started</button>
+    </div>
+    <img src="https://imgs.search.brave.com/lMA4P8rOVOt4abD7xbyFZzPqvkY8pYF10M_gWh5Vs9w/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9oaXBz/LmhlYXJzdGFwcHMu/Y29tL2htZy1wcm9k/L2ltYWdlcy9zbWFs/bC1kb2dzLTY2MjZj/Zjc0ZGZlMTcuanBn/P2Nyb3A9MC41Nzl4/dzowLjg2OHhoOzAu/MTk3eHcsMC4wMzM3/eGgmcmVzaXplPTY0/MDoq" alt="Cute Dog">
+  </section>
+
+  <section class="features">
+    <h3>Why Choose Us?</h3>
+    <div class="feature-cards">
+      <div class="card" id="food">
+        <img src="https://imgs.search.brave.com/u8QlI6XyAq9ZXTI-A0OWKgcbv9el8qNFj77iRZLPNQM/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS12ZWN0b3Iv/cGV0LWZvb2QtY29u/Y2VwdC1pbGx1c3Ry/YXRpb25fMTE0MzYw/LTk1MDAuanBnP3Nl/bXQ9YWlzX2h5YnJp/ZCZ3PTc0MA" alt="Dog Food">
+        <h4>Healthy Food</h4>
+        <p>Top-quality nutrition for dogs and cats of all breeds and ages.</p>
+      </div>
+      <div class="card" id="toys">
+        <img src="https://imgs.search.brave.com/EYLwJLjHVJ6b_hwhuNuWPB7PSdWcJ9G0hBXCDAdj2ug/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/c2h1dHRlcnN0b2Nr/LmNvbS9pbWFnZS1w/aG90by9kb2ctdG95/LWJhbGwtY2hld2lu/Zy1ib25lLTI2MG53/LTIyNTA0ODU3Mzcu/anBn" alt="Pet Toys">
+        <h4>Fun Toys</h4>
+        <p>Engaging and safe toys to keep your pets active and playful.</p>
+      </div>
+      <div class="card" id="grooming">
+        <img src="https://imgs.search.brave.com/ar7hty0fzx6kktaquixZg9jSlYFmocdbp80CBuDFxqw/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wMTYv/NzMzLzMzMS9zbWFs/bC9wZXQtZ3Jvb21p/bmctY2FydG9vbi1k/b2ctY2hhcmFjdGVy/LXdpdGgtZGlmZmVy/ZW50LXRvb2xzLWZv/ci1hbmltYWwtaGFp/ci1ncm9vbWluZy1o/YWlyY3V0cy1iYXRo/aW5nLWh5Z2llbmUt/cGV0LWNhcmUtc2Fs/b24tY29uY2VwdC12/ZWN0b3IuanBn" alt="Grooming Care">
+        <h4>Grooming Care</h4>
+        <p>Gentle and effective grooming products for all pets.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer">
+    &copy; 2025 Happy Paws. All rights reserved. |
+    <a href="#">Privacy Policy</a> |
+    <a href="#">Terms of Service</a>
+  </footer>
+
+</body>
+</html>
